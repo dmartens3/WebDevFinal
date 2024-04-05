@@ -9,4 +9,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "home#index"
+
+  # send authenticated admin users to the admin home page instead of the regular home page.
+  authenticated :admin_user do
+    root to: 'admin#index', as: :admin_root
+  end
+
+   # I think this links http://127.0.0.1:3000/admin to the admin home page.
+   get 'admin' => 'admin#index'
+   get 'admins/sign_up' => 'home#index'
 end
