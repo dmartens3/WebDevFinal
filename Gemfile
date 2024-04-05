@@ -68,3 +68,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+
+# Gems added by me
+
+gem 'devise', '~> 4.9'
+
+gem 'font-awesome-sass', '~> 6.5.1'
